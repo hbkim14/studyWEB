@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <!-- for mobile view -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>WEB-STUDY</title>
     <style>
       a {
@@ -47,8 +49,9 @@
         text-decoration-line: line-through;
       }
 
-      /* screen size < 800px */
-      @media(max-width: 800px) {
+      /* 0~767:모바일 767~1024:태블릿 1025~:PC */
+      /* screen size <= 767px */
+      @media screen and (max-width: 767px) {
         #grid {
           display:block;
         }
