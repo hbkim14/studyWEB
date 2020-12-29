@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>WEB-HTML</title>
+    <title>WEB-JavaScript</title>
     <style>
       a {
         color: black;
@@ -11,26 +11,63 @@
       h1 {
         text-align: center;
         font-size: 46px;
+        border-bottom: 2px solid gray;
+        padding: 20px;
+        margin-bottom: 0px;
       }
       h2 {
-        margin-top: 50px;
+        margin-top: 40px;
+      }
+      #grid {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+      }
+      #list {
+        border-right: 2px solid gray;
+      }
+      #list li {
+        font-size: 20px;
+        padding: 5px;
+      }
+      #content {
+        padding: 30px;
+        padding-top: 10px;
       }
       #active {
         color: green;
+      }
+      @media (max-width: 600px) {
+        #grid {
+          display: block;
+        }
+        h1 {
+          text-align: left;
+          border: none;
+        }
+        #list {
+          border-right: none;
+          border-bottom: 1px solid gray;
+        }
       }
     </style>
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
-    <ol>
-      <li><a href="web1.html">HTML</a></li>
-      <li><a href="web2.html">CSS</a></li>
-      <li><a href="web3.html" id="active">JavaScript</a></li>
-    </ol>
+    <div id="grid">
+      <div id="list">
+        <ol>
+          <li><a href="web1.html">HTML</a></li>
+          <li><a href="web2.html">CSS</a></li>
+          <li><a href="web3.html" id="active">JavaScript</a></li>
+        </ol>
+      </div>
 
-    <h2>Hello JavaScript!</h2>
-    <p>
-      공부 예정!
-    </p>
+      <div id="content">
+        <h2>Hello JavaScript!</h2>
+        <p>
+          공부 예정!
+        </p>
+      </div>
+    </div>
   </body>
 </html>
