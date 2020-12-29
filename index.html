@@ -17,13 +17,14 @@
       }
       #grid {
         display: grid;
-        grid-template-columns: 150px 1fr;
+        grid-template-columns: 200px 1fr;
         
       }
       #list {
         border-right: 2px solid gray;
       }
       #list li {
+        font-size: 20px;
         padding: 5px;
       }
       #content {
@@ -41,6 +42,22 @@
         color:gray;
         text-decoration-line: line-through;
       }
+
+      /* screen size < 600px */
+      @media(max-width: 600px) {
+        #grid {
+          display:block;
+        }
+        h1 {
+          text-align: left;
+          border: none;
+        }
+        #list {
+          border-right: none;
+          border-bottom: 2px solid gray;
+        }
+      }
+
     </style>
   </head>
   <body>
